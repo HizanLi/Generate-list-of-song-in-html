@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日音乐分享 Daily music</title>
+    <link type="text/css" media="all" href="./index.css" rel="stylesheet">
+    <script type="text/javascript">
+        function disagree() {
+            var userAgent = navigator.userAgent;
+            if (userAgent.indexOf("Firefox") != -1 || userAgent.indexOf("Chrome") != -1) {
+                window.location.href = "about:blank";
+                window.close();
+            } else {
+                window.opener = null;
+                window.open("", "_self");
+                window.close();
+            }
+        }
+        function agree() {
+            var date = new Date();
+            var expiresDays = 30;
+            date.setTime(date.getTime() + expiresDays * 24 * 3600 * 1000);
+            document.cookie = "age_certification=isok;expires=" + date.toGMTString() + ";path=/";
+            //window.location.reload();
+            window.location.href = "/Starter.html"
+        }
+        alert("Pleas read carefully")
+    </script>
+
+</head>
+
+<body>
+    <div class="htmleaf-container">
+        <div class="wrapper">
+            <div class="container">
+                <h1>每日音乐分享 <br> Daily Music</h1>
+                <div class="form">
+                    <p>警告 / WARNING</p>
+                    <p>本站为非盈利性质的网站，所有内容均来自于网络，大部分来自于YouTube，请不要二次销售本站的内容。</p>
+                    <p>Google 和Youtube 不支持网页内显示他们的内容，请使用 右键->在新标签页打开</p>
+                    <p>This web is considered as a nonprofit website, contains material collected from the internet,
+                        majorly Youtube, please do not resell material persent by this websitex</p>
+                        <p>Google and Youtube does not support in web display, so please use:<br> right click -> open in new tab <br>when needed</p>
+                    <button type="submit" id="login-button" onclick="return agree()">我同意 <br> I agree</button>
+                    <p></p>
+                    <button type="submit" id="login-button" onclick="return disagree()">我不同意 <br> I do not
+                        agree</button>
+                </div>
+            </div>
+            <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

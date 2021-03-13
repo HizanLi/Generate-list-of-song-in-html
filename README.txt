@@ -6,4 +6,4 @@ put the Song_generator.py in the root directory, then:
 
 python Song_generator.py
 
-Please view: http://www.cyberpunk-studio.com/ for demonstration
+Please view: http://www.cyberpunk-studio.com/ for demonstration or see the Example folder
